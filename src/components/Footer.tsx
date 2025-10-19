@@ -76,7 +76,7 @@ const Footer = () => {
                 <Github className="h-5 w-5" />
               </a>
               <a 
-                href="https://drive.google.com/file/d/1MuGBxInScRqAfUN2Bht1JHEP6HSkEScn/view?usp=sharing"
+                href="https://drive.google.com/file/d/1je1tjq4AXjKwUVNb7M97KcbZAcPKUMYY/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-100 dark:bg-gray-800 p-2 rounded-full text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"

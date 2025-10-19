@@ -58,7 +58,7 @@ export const FooterTapedDesign = () => {
                 </a>
                 <a 
                   className='text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white whitespace-nowrap font-medium transition-colors' 
-                  href="https://drive.google.com/file/d/1MuGBxInScRqAfUN2Bht1JHEP6HSkEScn/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1je1tjq4AXjKwUVNb7M97KcbZAcPKUMYY/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -114,7 +114,7 @@ export const FooterTapedDesign = () => {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href="https://drive.google.com/file/d/1MuGBxInScRqAfUN2Bht1JHEP6HSkEScn/view?usp=sharing"
+            href="https://drive.google.com/file/d/1je1tjq4AXjKwUVNb7M97KcbZAcPKUMYY/view?usp=sharing"
             target="_blank"
             rel="nofollow noopener noreferrer"
             aria-label="Resume"

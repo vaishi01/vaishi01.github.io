@@ -246,7 +246,7 @@ export function HeroSection04() {
           </a>
           
           <a
-            href="https://drive.google.com/file/d/1MuGBxInScRqAfUN2Bht1JHEP6HSkEScn/view?usp=sharing"
+            href="https://drive.google.com/file/d/1je1tjq4AXjKwUVNb7M97KcbZAcPKUMYY/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 hover:scale-110 transition-all duration-200 group"

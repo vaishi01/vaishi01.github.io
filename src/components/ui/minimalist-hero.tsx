@@ -69,6 +69,14 @@ export const MinimalistHero = ({
           transition={{ duration: 0.6, delay: 1 }}
           className="z-20 order-2 md:order-1 text-center md:text-left"
         >
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-4 md:mb-6"
+          >
+            Hi I'm Vaishnavi
+          </motion.h2>
           <p className="mx-auto max-w-xs text-sm leading-relaxed text-foreground/80 md:mx-0">{mainText}</p>
           <a href={readMoreLink} className="mt-4 inline-block text-sm font-medium text-foreground underline decoration-from-font">
             Read More
@@ -103,13 +111,21 @@ export const MinimalistHero = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="z-20 order-3 flex items-center justify-center text-center md:justify-start"
+          className="z-20 order-3 flex flex-col items-center justify-center text-center md:justify-start md:items-start"
         >
           <h1 className="text-7xl font-extrabold text-foreground md:text-8xl lg:text-9xl">
             {overlayText.part1}
             <br />
             {overlayText.part2}
           </h1>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+            className="text-sm md:text-base lg:text-lg font-medium text-foreground/70 mt-4 md:mt-6"
+          >
+            Web development | Backend developer | Full Stack Developer
+          </motion.p>
         </motion.div>
       </div>
 

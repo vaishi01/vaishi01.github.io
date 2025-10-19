@@ -53,7 +53,7 @@ const Index = () => {
     { icon: Phone, href: 'tel:+16612193884' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/vaishnavi-jaligama/' },
     { icon: Github, href: 'https://github.com/vaishi01' },
-    { icon: FileText, href: 'https://drive.google.com/file/d/1MuGBxInScRqAfUN2Bht1JHEP6HSkEScn/view?usp=sharing' },
+    { icon: FileText, href: 'https://drive.google.com/file/d/1je1tjq4AXjKwUVNb7M97KcbZAcPKUMYY/view?usp=sharing' },
   ];
 
   // Navigation links configuration

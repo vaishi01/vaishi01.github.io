@@ -422,7 +422,7 @@ const Contact = () => {
                   <Github className="h-6 w-6 text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors duration-300" />
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1MuGBxInScRqAfUN2Bht1JHEP6HSkEScn/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1je1tjq4AXjKwUVNb7M97KcbZAcPKUMYY/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card bg-black/5 dark:bg-white/5 hover:bg-purple-600/30 dark:hover:bg-purple-400/30 border border-black/10 dark:border-white/10 hover:border-purple-400/50 dark:hover:border-purple-300/50 p-3 rounded-lg hover:scale-110 transition-all duration-300 group"

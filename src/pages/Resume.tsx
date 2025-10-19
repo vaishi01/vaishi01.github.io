@@ -170,7 +170,7 @@ const Resume = () => {
           description="Student & Full Stack Developer"
         >
           <motion.a
-            href="https://drive.google.com/uc?export=download&id=1MuGBxInScRqAfUN2Bht1JHEP6HSkEScn"
+            href="https://drive.google.com/uc?export=download&id=1je1tjq4AXjKwUVNb7M97KcbZAcPKUMYY"
             target="_blank"
             rel="noopener noreferrer"
             download="Rajat_Maheshwari_Resume.pdf"
