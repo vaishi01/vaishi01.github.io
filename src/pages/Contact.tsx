@@ -215,7 +215,7 @@ const Contact = () => {
         phone: formData.phone,
         subject: formData.subject,
         message: formData.message,
-        to_email: 'rajat17.maheshwari@gmail.com'
+        to_email: 'vaishnavi.jaligama@gmail.com'
       };
 
       await emailjs.send(
@@ -268,8 +268,8 @@ const Contact = () => {
           Breathing={true}
           gradientColors={
             isDarkMode
-              ? ["#000000", "#047857", "#10b981", "#14b8a6", "#06b6d4", "#0284c7", "#3b82f6"]
-              : ["#f0fdfa", "#6ee7b7", "#5eead4", "#67e8f9", "#7dd3fc", "#93c5fd", "#60a5fa"]
+              ? ["#000000", "#0c1220", "#1e3a8a", "#1e40af", "#2563eb", "#3b82f6", "#60a5fa"]
+              : ["#f8fafc", "#f3e8ff", "#e9d5ff", "#ddd6fe", "#c4b5fd", "#a78bfa", "#8b5cf6"]
           }
           gradientStops={[30, 45, 55, 65, 75, 85, 100]}
           animationSpeed={0.015}
@@ -324,21 +324,21 @@ const Contact = () => {
               {/* Row 1: Email and Phone */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-teal-600 dark:text-teal-400 flex-shrink-0" />
+                  <Mail className="h-5 w-5 text-purple-600 dark:text-blue-400 flex-shrink-0" />
                   <div>
                     <h3 className="text-black dark:text-white font-semibold mb-1 text-sm">Email Address</h3>
-                    <a href="mailto:rajat17.maheshwari@gmail.com" className="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 text-sm transition-colors">
-                      rajat17.maheshwari@gmail.com
+                    <a href="mailto:vaishnavi.jaligama@gmail.com" className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-blue-400 text-sm transition-colors">
+                      vaishnavi.jaligama@gmail.com
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-teal-600 dark:text-teal-400 flex-shrink-0" />
+                  <Phone className="h-5 w-5 text-purple-600 dark:text-blue-400 flex-shrink-0" />
                   <div>
                     <h3 className="text-black dark:text-white font-semibold mb-1 text-sm">Phone Number</h3>
-                    <a href="tel:+18313468559" className="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 text-sm transition-colors">
-                      +1 (831) 346-8559
+                    <a href="tel:+16612193884" className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-blue-400 text-sm transition-colors">
+                      +1 (661) 219-3884
                     </a>
                   </div>
                 </div>
@@ -347,31 +347,31 @@ const Contact = () => {
               {/* Row 2: LinkedIn and GitHub */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-center space-x-3">
-                  <Linkedin className="h-5 w-5 text-teal-600 dark:text-teal-400 flex-shrink-0" />
+                  <Linkedin className="h-5 w-5 text-purple-600 dark:text-blue-400 flex-shrink-0" />
                   <div>
                     <h3 className="text-black dark:text-white font-semibold mb-1 text-sm">LinkedIn</h3>
                     <a 
-                      href="https://www.linkedin.com/in/rajat17maheshwari/"
+                      href="https://www.linkedin.com/in/vaishnavi-jaligama/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 text-sm transition-colors"
+                      className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-blue-400 text-sm transition-colors"
                     >
-                      linkedin.com/in/rajat17maheshwari
+                      linkedin.com/in/vaishnavi-jaligama
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <Github className="h-5 w-5 text-teal-600 dark:text-teal-400 flex-shrink-0" />
+                  <Github className="h-5 w-5 text-purple-600 dark:text-blue-400 flex-shrink-0" />
                   <div>
                     <h3 className="text-black dark:text-white font-semibold mb-1 text-sm">GitHub</h3>
                     <a
-                      href="https://github.com/rajatmaheshwari17"
+                      href="https://github.com/vaishi01"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 text-sm transition-colors"
+                      className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-blue-400 text-sm transition-colors"
                     >
-                      github.com/rajatmaheshwari17
+                      github.com/vaishi01
                     </a>
                   </div>
                 </div>
@@ -379,7 +379,7 @@ const Contact = () => {
 
               {/* Row 3: Location */}
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="h-5 w-5 text-teal-600 dark:text-teal-400 flex-shrink-0" />
+                <MapPin className="h-5 w-5 text-purple-600 dark:text-blue-400 flex-shrink-0" />
                 <div>
                   <h3 className="text-black dark:text-white font-semibold mb-1 text-sm">Location</h3>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">
@@ -394,19 +394,19 @@ const Contact = () => {
               <h3 className="text-black dark:text-white font-semibold mb-4 transition-colors duration-300">Connect With Me</h3>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="mailto:rajat17.maheshwari@gmail.com"
+                  href="mailto:vaishnavi.jaligama@gmail.com"
                   className="glass-card bg-black/5 dark:bg-white/5 hover:bg-red-500/30 dark:hover:bg-red-400/30 border border-black/10 dark:border-white/10 hover:border-red-500/50 dark:hover:border-red-400/50 p-3 rounded-lg hover:scale-110 transition-all duration-300 group"
                 >
                   <Mail className="h-6 w-6 text-red-500 dark:text-red-400 group-hover:text-red-600 dark:group-hover:text-red-300 transition-colors duration-300" />
                 </a>
                 <a
-                  href="tel:+18313468559"
+                  href="tel:+16612193884"
                   className="glass-card bg-black/5 dark:bg-white/5 hover:bg-green-500/30 dark:hover:bg-green-400/30 border border-black/10 dark:border-white/10 hover:border-green-500/50 dark:hover:border-green-400/50 p-3 rounded-lg hover:scale-110 transition-all duration-300 group"
                 >
                   <Phone className="h-6 w-6 text-green-600 dark:text-green-400 group-hover:text-green-700 dark:group-hover:text-green-300 transition-colors duration-300" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/rajat17maheshwari/"
+                  href="https://www.linkedin.com/in/vaishnavi-jaligama/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card bg-black/5 dark:bg-white/5 hover:bg-blue-700/30 dark:hover:bg-blue-500/30 border border-black/10 dark:border-white/10 hover:border-blue-500/50 dark:hover:border-blue-400/50 p-3 rounded-lg hover:scale-110 transition-all duration-300 group"
@@ -414,7 +414,7 @@ const Contact = () => {
                   <Linkedin className="h-6 w-6 text-blue-700 dark:text-blue-500 group-hover:text-blue-800 dark:group-hover:text-blue-300 transition-colors duration-300" />
                 </a>
                 <a
-                  href="https://github.com/rajatmaheshwari17"
+                  href="https://github.com/vaishi01"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card bg-black/5 dark:bg-white/5 hover:bg-gray-600/30 dark:hover:bg-gray-300/30 border border-black/10 dark:border-white/10 hover:border-gray-400/50 dark:hover:border-gray-300/50 p-3 rounded-lg hover:scale-110 transition-all duration-300 group"
@@ -580,7 +580,7 @@ const Contact = () => {
                 disabled={!isFormValid() || submitting}
                   className={`w-full py-2.5 text-base font-medium rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 ${
                     isFormValid() && !submitting
-                      ? 'glass-card bg-blue-600/50 hover:bg-blue-200/60 dark:hover:bg-blue-500/30 text-black dark:text-white border border-blue-400/30 hover:border-blue-300/50 dark:hover:border-blue-300/50 hover:scale-105 cursor-pointer'
+                      ? 'glass-card bg-purple-600/50 hover:bg-purple-200/60 dark:bg-blue-600/50 dark:hover:bg-blue-500/30 text-black dark:text-white border border-purple-400/30 hover:border-purple-300/50 dark:border-blue-400/30 dark:hover:border-blue-300/50 hover:scale-105 cursor-pointer'
                       : 'bg-gray-400/30 text-gray-500 dark:text-gray-400 border border-gray-300/30 cursor-not-allowed opacity-50'
                   }`}
               >

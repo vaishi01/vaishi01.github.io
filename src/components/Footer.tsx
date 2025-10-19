@@ -43,7 +43,7 @@ const Footer = () => {
           
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-black dark:text-white">Rajat Maheshwari</h3>
+            <h3 className="text-xl font-bold text-black dark:text-white">Vaishnavi Jaligama</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               Computer Science senior at UCSC passionate about AI, LLMs, and backend engineering. Currently seeking <strong>full-time opportunities</strong> in software engineering and AI research.
             </p>
@@ -51,14 +51,14 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex space-x-3 pt-2">
               <a 
-                href="mailto:rajat17.maheshwari@gmail.com" 
+                href="mailto:vaishnavi.jaligama@gmail.com" 
                 className="bg-gray-100 dark:bg-gray-800 p-2 rounded-full text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
               </a>
               <a 
-                href="https://www.linkedin.com/in/rajat17maheshwari/" 
+                href="https://www.linkedin.com/in/vaishnavi-jaligama/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-gray-100 dark:bg-gray-800 p-2 rounded-full text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
@@ -67,7 +67,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a 
-                href="https://github.com/rajatmaheshwari17" 
+                href="https://github.com/vaishi01" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-gray-100 dark:bg-gray-800 p-2 rounded-full text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
@@ -123,38 +123,38 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-black dark:text-white">Get In Touch</h3>
             <div className="space-y-3">
               <a 
-                href="mailto:rajat17.maheshwari@gmail.com"
+                href="mailto:vaishnavi.jaligama@gmail.com"
                 className="flex items-start space-x-2 text-sm text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-300"
               >
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span className="break-all">rajat17.maheshwari@gmail.com</span>
+                <span className="break-all">vaishnavi.jaligama@gmail.com</span>
               </a>
               <a 
-                href="tel:+18313468559"
+                href="tel:+16612193884"
                 className="flex items-center space-x-2 text-sm text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-300"
               >
                 <svg className="h-4 w-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                   <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
                 </svg>
-                <span>+1 (831) 346-8559</span>
+                <span>+1 (661) 219-3884</span>
               </a>
               <a 
-                href="https://www.linkedin.com/in/rajat17maheshwari/"
+                href="https://www.linkedin.com/in/vaishnavi-jaligama/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-sm text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-300"
               >
                 <Linkedin className="h-4 w-4 flex-shrink-0" />
-                <span>linkedin.com/in/rajat17maheshwari</span>
+                <span>linkedin.com/in/vaishnavi-jaligama</span>
               </a>
               <a 
-                href="https://github.com/rajatmaheshwari17"
+                href="https://github.com/vaishi01"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-sm text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-300"
               >
                 <Github className="h-4 w-4 flex-shrink-0" />
-                <span>github.com/rajatmaheshwari17</span>
+                <span>github.com/vaishi01</span>
               </a>
               <div className="flex items-center space-x-2 text-sm text-gray-700 dark:text-gray-300">
                 <svg className="h-4 w-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -169,7 +169,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="border-t border-black/10 dark:border-white/10 pt-4 pb-0">
           <p className="text-center text-sm text-gray-700 dark:text-gray-300">
-            © {new Date().getFullYear()} Rajat Maheshwari. All rights reserved.
+            © {new Date().getFullYear()} Vaishnavi Jaligama. All rights reserved.
           </p>
         </div>
       </div>

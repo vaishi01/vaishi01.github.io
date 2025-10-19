@@ -49,10 +49,10 @@ const Index = () => {
 
   // Social links configuration
   const socialLinks = [
-    { icon: Mail, href: 'mailto:rajat17.maheshwari@gmail.com' },
-    { icon: Phone, href: 'tel:+18313468559' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/rajat17maheshwari/' },
-    { icon: Github, href: 'https://github.com/rajatmaheshwari17' },
+    { icon: Mail, href: 'mailto:vaishnavi.jaligama@gmail.com' },
+    { icon: Phone, href: 'tel:+16612193884' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/vaishnavi-jaligama/' },
+    { icon: Github, href: 'https://github.com/vaishi01' },
     { icon: FileText, href: 'https://drive.google.com/file/d/1MuGBxInScRqAfUN2Bht1JHEP6HSkEScn/view?usp=sharing' },
   ];
 
@@ -79,7 +79,7 @@ const Index = () => {
         <MinimalistHero
           mainText="Computer Science student at UC Santa Cruz passionate about AI, LLMs, and backend engineering. Building intelligent systems that are transparent, interpretable, and impactful."
           readMoreLink="#about"
-          imageSrc="/Rajat.JPG"
+          imageSrc="/vaishnavi.jpg"
           imageAlt="Profile picture"
           overlayText={{
             part1: 'Build.',

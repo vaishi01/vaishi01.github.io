@@ -5,7 +5,7 @@ import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 import { motion } from "framer-motion";
 import { Download, Briefcase, GraduationCap, Award, Code, Calendar, Building2, Shield, Trophy, BadgeCheck, Star, Laptop, Server, Wrench, Users as UsersIcon } from "lucide-react";
 import { Timeline } from "@/components/ui/timeline";
-import { HoverEffect } from "@/components/ui/hover-effect";
+import { GlowCard } from "@/components/ui/glow-card";
 import { SkillCard } from "@/components/ui/skills-card";
 import { cn } from "@/lib/utils";
 
@@ -70,8 +70,8 @@ const Resume = () => {
       degree: "Bachelor of Computer Science",
       school: "University of California, Santa Cruz",
       period: "2022 - 2026",
-      GPA: "3.95",
-      organizations: "10x Dean's Honor List",
+      GPA: "3.7",
+      organizations: "7x Dean's Honor List",
       coursework: "Introduction to Data Structures, Principle of Computer Systems Design, Artificial Intelligence"
     }
   ];
@@ -275,7 +275,44 @@ const Resume = () => {
               <Award className="text-blue-600 dark:text-blue-400" size={32} />
               <h2 className="text-3xl font-bold">Certifications</h2>
             </div>
-            <HoverEffect items={certifications} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 max-w-6xl mx-auto">
+              {certifications.map((cert, index) => (
+                <GlowCard
+                  key={index}
+                  glowColor={index % 2 === 0 ? "blue" : "purple"}
+                  customSize={true}
+                  width={420}
+                  height={380}
+                  className="bg-transparent mx-auto"
+                >
+                  <div className="flex flex-col items-center text-center h-full justify-between">
+                    <div className="flex flex-col items-center text-center flex-grow">
+                      <div className="mb-4 flex justify-center items-center h-[60px]">
+                        {cert.icon}
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3 leading-tight">
+                        {cert.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        {cert.description}
+                      </p>
+                    </div>
+                    <div className="flex justify-center pt-4">
+                      <button 
+                        onClick={() => {
+                          if (cert.link && cert.link !== '#') {
+                            window.open(cert.link, '_blank');
+                          }
+                        }}
+                        className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white border border-blue-600 dark:border-blue-500 px-8 py-3 rounded-lg font-medium transition-colors duration-200 text-sm w-full max-w-[160px] whitespace-nowrap"
+                      >
+                        VIEW
+                      </button>
+                    </div>
+                  </div>
+                </GlowCard>
+              ))}
+            </div>
           </motion.section>
         </div>
       </main>
