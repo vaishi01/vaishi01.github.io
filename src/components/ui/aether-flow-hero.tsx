@@ -1,34 +1,21 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 // A utility function for class names
-const cn = (...classes: (string | boolean | undefined)[]) => classes.filter(Boolean).join(' ');
+const cn = (...classes: any[]) => classes.filter(Boolean).join(' ');
 
 // The main hero component
 const AetherFlowHero = () => {
-    const canvasRef = React.useRef<HTMLCanvasElement | null>(null);
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const canvasRef = React.useRef<HTMLCanvasElement>(null);
+    const { theme } = useTheme();
+    const [mounted, setMounted] = React.useState(false);
 
-    // Detect theme changes
-    useEffect(() => {
-        const checkTheme = () => {
-            const isDark = document.documentElement.classList.contains('dark');
-            setIsDarkMode(isDark);
-        };
-
-        checkTheme();
-        
-        // Watch for theme changes
-        const observer = new MutationObserver(checkTheme);
-        observer.observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ['class']
-        });
-
-        return () => observer.disconnect();
+    // Prevent hydration mismatch
+    React.useEffect(() => {
+        setMounted(true);
     }, []);
 
     React.useEffect(() => {
@@ -36,10 +23,8 @@ const AetherFlowHero = () => {
         if (!canvas) return;
         
         const ctx = canvas.getContext('2d');
-        if (!ctx) return;
-        
         let animationFrameId: number;
-        let particles: Particle[] = [];
+        let particles: any[] = [];
         const mouse = { x: null as number | null, y: null as number | null, radius: 200 };
 
         // Moved Particle class definition here to avoid initialization errors
@@ -69,7 +54,8 @@ const AetherFlowHero = () => {
             }
 
             update() {
-                if (!canvas) return;
+                if (!canvas || !ctx) return;
+                
                 if (this.x > canvas.width || this.x < 0) {
                     this.directionX = -this.directionX;
                 }
@@ -101,17 +87,20 @@ const AetherFlowHero = () => {
             if (!canvas) return;
             particles = [];
             let numberOfParticles = (canvas.height * canvas.width) / 9000;
+            // Theme-aware particle colors
+            const particleColor = mounted && theme === 'light' 
+                ? 'rgba(59, 130, 246, 0.8)' // Blue color for light mode
+                : 'rgba(191, 128, 255, 0.8)'; // Purple color for dark mode
+            
             for (let i = 0; i < numberOfParticles; i++) {
                 let size = (Math.random() * 2) + 1;
                 let x = (Math.random() * ((window.innerWidth - size * 2) - (size * 2)) + size * 2);
                 let y = (Math.random() * ((window.innerHeight - size * 2) - (size * 2)) + size * 2);
                 let directionX = (Math.random() * 0.4) - 0.2;
                 let directionY = (Math.random() * 0.4) - 0.2;
-                // Black particles for light mode, white particles for dark mode
-                let color = isDarkMode ? 'rgba(255, 255, 255, 0.8)' : 'rgba(0, 0, 0, 0.8)';
-                particles.push(new Particle(x, y, directionX, directionY, size, color));
+                particles.push(new Particle(x, y, directionX, directionY, size, particleColor));
             }
-        }
+        };
 
         const resizeCanvas = () => {
             if (!canvas) return;
@@ -133,20 +122,19 @@ const AetherFlowHero = () => {
                     if (distance < (canvas.width / 7) * (canvas.height / 7)) {
                         opacityValue = 1 - (distance / 20000);
                         
-                        let dx_mouse_a = particles[a].x - (mouse.x ?? 0);
-                        let dy_mouse_a = particles[a].y - (mouse.y ?? 0);
+                        let dx_mouse_a = particles[a].x - (mouse.x || 0);
+                        let dy_mouse_a = particles[a].y - (mouse.y || 0);
                         let distance_mouse_a = Math.sqrt(dx_mouse_a*dx_mouse_a + dy_mouse_a*dy_mouse_a);
 
                         if (mouse.x && distance_mouse_a < mouse.radius) {
-                             // Highlight color on mouse hover
-                             ctx.strokeStyle = isDarkMode 
-                                ? `rgba(255, 255, 255, ${opacityValue})` 
-                                : `rgba(0, 0, 0, ${opacityValue})`;
+                            // White lines when mouse is near
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${opacityValue})`;
                         } else {
-                             // Normal line color: black in light mode, white in dark mode
-                             ctx.strokeStyle = isDarkMode 
-                                ? `rgba(255, 255, 255, ${opacityValue * 0.6})` 
-                                : `rgba(0, 0, 0, ${opacityValue * 0.6})`;
+                            // Theme-aware connection lines
+                            const lineColor = mounted && theme === 'light' 
+                                ? `rgba(59, 130, 246, ${opacityValue})` // Blue for light mode
+                                : `rgba(200, 150, 255, ${opacityValue})`; // Purple for dark mode
+                            ctx.strokeStyle = lineColor;
                         }
                         
                         ctx.lineWidth = 1;
@@ -163,7 +151,8 @@ const AetherFlowHero = () => {
             if (!canvas || !ctx) return;
             animationFrameId = requestAnimationFrame(animate);
             // Set the background color based on theme
-            ctx.fillStyle = isDarkMode ? 'black' : 'white';
+            const backgroundColor = mounted && theme === 'light' ? 'white' : 'black';
+            ctx.fillStyle = backgroundColor;
             ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
             for (let i = 0; i < particles.length; i++) {
@@ -194,7 +183,7 @@ const AetherFlowHero = () => {
             window.removeEventListener('mouseout', handleMouseOut);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [isDarkMode]);
+    }, [mounted, theme]);
 
     const fadeUpVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -210,80 +199,49 @@ const AetherFlowHero = () => {
     };
 
     return (
-        // Updated to h-[50vh] to match Contact page hero section
-        <div className="relative h-[50vh] w-full flex flex-col items-center justify-center overflow-hidden">
-            {/* The canvas is now the primary background */}
+        // Full width container with constrained content
+        <div className="relative h-[40vh] min-h-[400px] w-full flex flex-col items-center justify-center overflow-hidden">
+            {/* The canvas covers the full width */}
             <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full"></canvas>
             
-            {/* Overlay HTML Content */}
-            <div className="relative z-10 text-center p-6">
-                <motion.div
+            {/* Overlay HTML Content - constrained width */}
+            <div className="relative z-10 text-center p-6 max-w-4xl mx-auto">
+
+                <motion.h1
                     custom={0}
                     variants={fadeUpVariants}
                     initial="hidden"
                     animate="visible"
-                    className={cn(
-                        "inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm",
-                        isDarkMode 
-                            ? "bg-purple-500/10 border border-purple-500/20" 
-                            : "bg-purple-100/50 border border-purple-300/50"
-                    )}
+                    className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${mounted && theme === 'light' ? 'text-gray-900' : 'text-white'}`}
                 >
-                    <Zap className={cn("h-4 w-4", isDarkMode ? "text-purple-400" : "text-purple-600")} />
-                    <span className={cn("text-sm font-medium", isDarkMode ? "text-gray-200" : "text-gray-800")}>
-                        Innovation in Action
-                    </span>
-                </motion.div>
+                    Resume
+                </motion.h1>
 
-                <motion.h1
+                <motion.p
                     custom={1}
                     variants={fadeUpVariants}
                     initial="hidden"
                     animate="visible"
-                    className={cn(
-                        "text-5xl md:text-8xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent",
-                        isDarkMode 
-                            ? "bg-gradient-to-b from-white to-gray-400" 
-                            : "bg-gradient-to-b from-gray-900 to-gray-600"
-                    )}
+                    className={`max-w-2xl mx-auto text-lg mb-10 ${mounted && theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}
                 >
-                    My Projects
-                </motion.h1>
+                    Student & Full Stack Developer passionate about AI, machine learning, and creating innovative solutions that make a real impact.
+                </motion.p>
 
-                <motion.p
+                <motion.div
                     custom={2}
                     variants={fadeUpVariants}
                     initial="hidden"
                     animate="visible"
-                    className={cn(
-                        "max-w-2xl mx-auto text-lg mb-10",
-                        isDarkMode ? "text-gray-400" : "text-gray-600"
-                    )}
                 >
-                    A showcase of my work in web development, consulting solutions, and innovative applications that push the boundaries of digital experiences.
-                </motion.p>
-
-                <motion.div
-                    custom={3}
-                    variants={fadeUpVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
-                    <button 
-                        onClick={() => {
-                            const projectsGrid = document.querySelector('.grid');
-                            projectsGrid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }}
-                        className={cn(
-                            "px-8 py-4 font-semibold rounded-lg shadow-lg transition-colors duration-300 flex items-center gap-2 mx-auto",
-                            isDarkMode 
-                                ? "bg-white text-black hover:bg-gray-200" 
-                                : "bg-black text-white hover:bg-gray-800"
-                        )}
+                    <a
+                        href="https://drive.google.com/uc?export=download&id=1je1tjq4AXjKwUVNb7M97KcbZAcPKUMYY"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download="Vaishnavi_Jaligama_Resume.pdf"
+                        className={`px-6 py-2 font-medium rounded-lg transition-colors duration-300 ${mounted && theme === 'light' ? 'bg-gray-900 text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-200'}`}
                     >
-                        View Projects
-                        <ArrowRight className="h-5 w-5" />
-                    </button>
+                        Download Resume
+                    </a>
                 </motion.div>
             </div>
         </div>
@@ -291,4 +249,3 @@ const AetherFlowHero = () => {
 };
 
 export default AetherFlowHero;
-

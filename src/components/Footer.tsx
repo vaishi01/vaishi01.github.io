@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-black dark:text-white">Vaishnavi Jaligama</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
-              Computer Science senior at UCSC passionate about AI, LLMs, and backend engineering. Currently seeking <strong>full-time opportunities</strong> in software engineering and AI research.
+            Computer Science senior at UC Santa Cruz passionate about AI, LLMs, and backend systems. Actively seeking full-time opportunities in software engineering and applied AI research to build scalable, intelligent solutions.
             </p>
             
             {/* Social Media Links */}

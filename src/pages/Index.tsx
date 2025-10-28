@@ -74,7 +74,7 @@ const Index = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="pt-16 md:pt-20"
+        className="pt-12 sm:pt-16 md:pt-20"
       >
         <MinimalistHero
           mainText="Computer Science student at UC Santa Cruz passionate about AI, LLMs, and backend engineering. Building intelligent systems that are transparent, interpretable, and impactful."
@@ -90,42 +90,42 @@ const Index = () => {
         />
         
         <div id="about" className={`w-full mx-auto ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-          <div className="w-full mb-8 py-4">
-            <div className="max-w-6xl mx-auto text-left px-4 sm:px-6 lg:px-8">
+          <div className="w-full mb-6 sm:mb-8 py-2 sm:py-4">
+            <div className="max-w-6xl mx-auto text-left px-3 sm:px-4 md:px-6 lg:px-8">
               <h2 className={cn(
-                "text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 text-center",
+                "text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 md:mb-12 text-center",
                 isDarkMode ? 'text-white' : 'text-gray-800'
               )}>
                 ABOUT ME
               </h2>
               
-              <div className="space-y-6 sm:space-y-8">
+              <div className="space-y-4 sm:space-y-6 md:space-y-8">
                 <p className={cn(
-                  "text-base sm:text-lg md:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
+                  "text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
                   isDarkMode ? 'text-gray-200' : 'text-gray-700'
                 )}>
                   I'm a senior at the <strong>University of California, Santa Cruz</strong>, majoring in <strong>Computer Science</strong> with a strong passion for <strong>Artificial Intelligence</strong>, <strong>Large Language Models (LLMs)</strong>, and <strong>backend engineering</strong>. My work lies at the intersection of AI, reasoning, and scalable system design—driven by the goal of making intelligent systems more <strong>transparent, interpretable, and impactful</strong>.
                 </p>
                 <p className={cn(
-                  "text-base sm:text-lg md:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
+                  "text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
                   isDarkMode ? 'text-gray-200' : 'text-gray-700'
                 )}>
                   At the <strong>AIEA Lab</strong> under Professor Leilani Gilpin, I'm developing a <strong>chatbot fine-tuned on UCSC data</strong> to assist prospective students, current students, professors, and staff, streamlining campus information access through <strong>conversational AI</strong>. I'm also researching the applications of LLMs in law, focusing on building frameworks for <strong>logical reasoning, fairness, and explainability</strong> in legal decision-making.
                 </p>
                 <p className={cn(
-                  "text-base sm:text-lg md:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
+                  "text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
                   isDarkMode ? 'text-gray-200' : 'text-gray-700'
                 )}>
                   Most recently, I worked as a <strong>Software Engineer Intern at AJA Consulting Services</strong>, where I built the company's official website from scratch using <strong>React, Next.js, and Tailwind CSS</strong>, increasing client engagement by <strong>70%</strong>. I also developed <strong>RBCal</strong>, a profitability analysis tool for an oil manufacturing client that automated rice bran purchase calculations and improved profit margins by <strong>18%</strong> through real-time data insights.
                 </p>
                 <p className={cn(
-                  "text-base sm:text-lg md:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
+                  "text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
                   isDarkMode ? 'text-gray-200' : 'text-gray-700'
                 )}>
                   Previously, I interned at <strong>Nutanix</strong>, where I built an <strong>AI-powered log search chatbot</strong> that translated natural language queries into optimized <strong>OpenSearch DSL commands</strong>, enabling precise search across <strong>20TB+ of system logs</strong>. By fine-tuning lightweight LLMs like <strong>TinyLlama and Gemma 27B</strong> using <strong>LoRA and few-shot prompting</strong>, I improved semantic retrieval precision from <strong>72% to 93%</strong>, reducing issue-resolution time by <strong>65%</strong>.
                 </p>
                 <p className={cn(
-                  "text-base sm:text-lg md:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
+                  "text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
                   isDarkMode ? 'text-gray-200' : 'text-gray-700'
                 )}>
                   I'm deeply interested in advancing the fields of <strong>AI, LLMs, and backend systems</strong>, continuously exploring how <strong>logical reasoning and interpretability</strong> can make artificial intelligence more <strong>ethical, transparent, and useful to society</strong>.

@@ -40,14 +40,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           <div
             className={`timeline-circle h-10 absolute w-10 rounded-full bg-white dark:bg-black flex items-center justify-center border-2 border-blue-200 dark:border-blue-800 left-3 md:left-3`}
           >
-            <div className="h-4 w-4 rounded-full bg-gradient-to-r from-blue-600 to-red-600 dark:from-blue-400 dark:to-red-400 p-2" />
+            <div className="h-4 w-4 rounded-full bg-gradient-to-r from-blue-800 to-purple-400 dark:from-blue-600 dark:to-purple-300 p-2" />
           </div>
-          <h3 className="hidden md:block text-base md:pl-20 md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-red-600 dark:from-blue-400 dark:to-red-400 bg-clip-text text-transparent">
+          <h3 className="hidden md:block text-base md:pl-20 md:text-2xl font-bold bg-gradient-to-r from-blue-800 to-purple-400 dark:from-blue-600 dark:to-purple-300 bg-clip-text text-transparent">
             {item.title}
           </h3>
         </div>
         <div className="relative pl-20 pr-4 md:pl-4 w-full">
-          <h3 className="md:hidden block text-2xl mb-4 text-left font-bold bg-gradient-to-r from-blue-600 to-red-600 dark:from-blue-400 dark:to-red-400 bg-clip-text text-transparent">
+          <h3 className="md:hidden block text-2xl mb-4 text-left font-bold bg-gradient-to-r from-blue-800 to-purple-400 dark:from-blue-600 dark:to-purple-300 bg-clip-text text-transparent">
             {item.title}
           </h3>
           {item.content}
@@ -129,7 +129,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-red-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-400 via-blue-800 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>

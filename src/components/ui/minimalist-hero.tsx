@@ -53,7 +53,7 @@ export const MinimalistHero = ({
   return (
     <div
       className={cn(
-        'relative flex h-screen w-full flex-col items-center justify-between overflow-hidden bg-white dark:bg-black p-8 font-sans md:p-12',
+        'relative flex h-screen w-full flex-col items-center justify-between overflow-hidden bg-white dark:bg-black p-4 sm:p-6 md:p-8 lg:p-12 font-sans',
         className
       )}
     >
@@ -61,7 +61,7 @@ export const MinimalistHero = ({
       <div className="h-0"></div>
 
       {/* Main Content Area */}
-      <div className="relative grid w-full max-w-7xl flex-grow grid-cols-1 items-center md:grid-cols-3">
+      <div className="relative grid w-full max-w-7xl flex-grow grid-cols-1 items-center gap-4 sm:gap-6 md:grid-cols-3 md:gap-0">
         {/* Left Text Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,11 +73,11 @@ export const MinimalistHero = ({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-4 md:mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground mb-3 sm:mb-4 md:mb-6"
           >
             Hi I'm Vaishnavi
           </motion.h2>
-          <p className="mx-auto max-w-xs text-sm leading-relaxed text-foreground/80 md:mx-0">{mainText}</p>
+          <p className="mx-auto max-w-sm sm:max-w-md md:max-w-xs text-xs sm:text-sm leading-relaxed text-foreground/80 md:mx-0 px-2 sm:px-0">{mainText}</p>
           <a href={readMoreLink} className="mt-4 inline-block text-sm font-medium text-foreground underline decoration-from-font">
             Read More
           </a>
@@ -89,12 +89,12 @@ export const MinimalistHero = ({
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                className="absolute z-0 h-[350px] w-[350px] rounded-full bg-gradient-to-br from-purple-200 to-blue-300 dark:from-purple-400/60 dark:to-blue-500/60 md:h-[450px] md:w-[450px] lg:h-[550px] lg:w-[550px]"
+                className="absolute z-0 h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px] rounded-full bg-gradient-to-br from-purple-200 to-blue-300 dark:from-purple-400/60 dark:to-blue-500/60"
             ></motion.div>
             <motion.img
                 src={imageSrc}
                 alt={imageAlt}
-                className="relative z-10 h-auto w-72 object-cover md:w-80 scale-150 lg:w-96 rounded-full"
+                className="relative z-10 h-auto w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 object-cover scale-125 sm:scale-150 rounded-full"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
@@ -113,7 +113,7 @@ export const MinimalistHero = ({
           transition={{ duration: 0.6, delay: 1.2 }}
           className="z-20 order-3 flex flex-col items-center justify-center text-center md:justify-start md:items-start"
         >
-          <h1 className="text-7xl font-extrabold text-foreground md:text-8xl lg:text-9xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-foreground">
             {overlayText.part1}
             <br />
             {overlayText.part2}
@@ -122,7 +122,7 @@ export const MinimalistHero = ({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.4 }}
-            className="text-sm md:text-base lg:text-lg font-medium text-foreground/70 mt-4 md:mt-6"
+            className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-foreground/70 mt-2 sm:mt-3 md:mt-4 lg:mt-6 px-2 sm:px-0"
           >
             Web development | Backend developer | Full Stack Developer
           </motion.p>
@@ -130,12 +130,12 @@ export const MinimalistHero = ({
       </div>
 
       {/* Footer Elements */}
-      <footer className="z-30 flex w-full max-w-7xl items-center justify-between mb-8 md:mb-12">
+      <footer className="z-30 flex w-full max-w-7xl items-center justify-between mb-4 sm:mb-6 md:mb-8 lg:mb-12 flex-col sm:flex-row gap-4 sm:gap-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.2 }}
-          className="flex items-center space-x-4"
+          className="flex items-center space-x-3 sm:space-x-4"
         >
           {socialLinks.map((link, index) => (
             <SocialIcon key={index} href={link.href} icon={link.icon} />
@@ -145,7 +145,7 @@ export const MinimalistHero = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.3 }}
-          className="text-sm font-medium text-foreground/80"
+          className="text-xs sm:text-sm font-medium text-foreground/80 text-center sm:text-left"
         >
           {locationText}
         </motion.div>

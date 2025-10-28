@@ -262,7 +262,7 @@ const Contact = () => {
       <MinimalistNavbar navLinks={navLinks} />
 
       {/* ANIMATED GRADIENT HERO SECTION */}
-      <div className="relative h-[60vh] min-h-[500px] overflow-hidden pt-16 md:pt-20">
+      <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[400px] sm:min-h-[450px] md:min-h-[500px] overflow-hidden pt-12 sm:pt-16 md:pt-20">
         <AnimatedGradientBackground
           startingGap={120}
           Breathing={true}
@@ -277,11 +277,11 @@ const Contact = () => {
           topOffset={0}
           containerClassName="h-full"
         >
-          <div className="flex h-[60vh] min-h-[500px] w-full items-center justify-center px-4">
+          <div className="flex h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[400px] sm:min-h-[450px] md:min-h-[500px] w-full items-center justify-center px-3 sm:px-4">
             <div className="flex flex-col items-center justify-center gap-4 text-center max-w-4xl mx-auto">
               {/* Main Title */}
               <motion.h1
-                className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight drop-shadow-lg ${
+                className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight drop-shadow-lg ${
                   isDarkMode ? 'text-white' : 'text-black'
                 }`}
                 initial={{ opacity: 0, y: 20 }}
@@ -293,7 +293,7 @@ const Contact = () => {
 
               {/* Subtitle */}
               <motion.p
-                className={`text-base md:text-lg lg:text-xl tracking-tight max-w-2xl drop-shadow-md ${
+                className={`text-sm sm:text-base md:text-lg lg:text-xl tracking-tight max-w-2xl drop-shadow-md ${
                   isDarkMode ? 'text-white/90' : 'text-black/80'
                 }`}
                 initial={{ opacity: 0, y: 20 }}
@@ -308,13 +308,13 @@ const Contact = () => {
       </div>
 
       {/* Main Content */}
-      <div id="contact-form" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-black transition-colors duration-300">
-        <div className="grid lg:grid-cols-2 gap-12">
+      <div id="contact-form" className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 md:py-16 bg-white dark:bg-black transition-colors duration-300">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl font-bold text-black dark:text-white mb-6 transition-colors duration-300">Let's Start a Conversation</h2>
-              <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-300">
+              <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-4 sm:mb-6 transition-colors duration-300">Let's Start a Conversation</h2>
+              <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed transition-colors duration-300">
                 Looking for exciting career opportunities where I can contribute my skills and grow professionally. I'm eager to connect with recruiters, hiring managers, and industry professionals. Let's discuss how I can add value to your team.
               </p>
             </div>

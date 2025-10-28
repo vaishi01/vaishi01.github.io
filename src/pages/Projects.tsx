@@ -1,7 +1,9 @@
 import React from 'react';
 import { MinimalistNavbar } from "@/components/ui/minimalist-navbar";
 import { FooterTapedDesign } from "@/components/ui/footer-taped-design";
-import { WavyBackground } from "@/components/ui/wavy-background";
+import { SplineScene } from "@/components/ui/spline";
+import { Spotlight } from "@/components/ui/spotlight";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Brain, Sparkles, Server, Layers, MessagesSquare, Code, Database, Terminal, Cpu, TrendingUp, Zap, Binary, Box } from "lucide-react";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
@@ -176,42 +178,70 @@ const Projects = () => {
       {/* Minimalist Navbar */}
       <MinimalistNavbar navLinks={navLinks} />
       
-      {/* Hero Section with Wavy Background */}
-      <div className="relative pt-16 md:pt-20">
-        <WavyBackground 
-          containerClassName="h-[40vh] min-h-[400px]"
-          className="max-w-4xl mx-auto"
-          colors={[
-            "#38bdf8",
-            "#818cf8",
-            "#c084fc",
-            "#e879f9",
-            "#22d3ee",
-          ]}
-          waveOpacity={0.5}
-          blur={10}
-          speed="fast"
-          waveWidth={50}
-        >
-          <div className="text-center px-4">
-            <motion.h1 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-white"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Projects
-            </motion.h1>
-            <motion.p 
-              className="text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Explore my portfolio of AI, systems programming, and innovative solutions
-            </motion.p>
+      {/* Hero Section with Spline 3D */}
+      <div className="relative pt-16 md:pt-20 px-4 sm:px-6 lg:px-8">
+        <Card className="w-full max-w-7xl mx-auto h-[50vh] min-h-[400px] bg-black/[0.96] relative overflow-hidden border border-gray-800 dark:border-gray-700 shadow-2xl rounded-xl">
+          <Spotlight
+            className="-top-40 left-0 md:left-60 md:-top-20"
+            fill="white"
+          />
+          
+          <div className="flex h-full">
+            {/* Left content */}
+            <div className="flex-1 p-8 relative z-10 flex flex-col justify-center items-center text-center">
+              <CardHeader className="p-0 mb-6">
+                <CardTitle className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-4 text-center">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    Project Showcase
+                  </motion.div>
+                </CardTitle>
+                <CardDescription className="text-lg md:text-xl text-neutral-300 max-w-2xl text-center">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                  >
+                    Explore my portfolio of AI, systems programming, and innovative solutions. 
+                    From machine learning algorithms to full-stack applications, discover projects 
+                    that showcase technical expertise and creative problem-solving. Dive into 
+                    cutting-edge technologies and see how I transform ideas into reality.
+                  </motion.div>
+                </CardDescription>
+                
+                {/* Spacer div for explicit spacing */}
+                <div className="h-8"></div>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="flex justify-center"
+                >
+                  <a
+                    href="https://github.com/vaishi01"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-300 dark:text-neutral-300 font-medium rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-600 hover:text-black dark:hover:text-white transition-all duration-300"
+                  >
+                    GitHub
+                  </a>
+                </motion.div>
+              </CardHeader>
+            </div>
+
+            {/* Right content - Interactive Robot */}
+            <div className="flex-1 relative">
+              <SplineScene 
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="w-full h-full"
+              />
+            </div>
           </div>
-        </WavyBackground>
+        </Card>
       </div>
       
       {/* Main content */}
