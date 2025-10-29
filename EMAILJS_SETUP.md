@@ -1,6 +1,6 @@
 # EmailJS Setup Guide for Contact Form
 
-Your contact form now uses EmailJS to send emails directly to `rajat17.maheshwari@gmail.com` when someone submits the form.
+Your contact form now uses EmailJS to send emails directly to `vaishnavi.jaligama@gmail.com` when someone submits the form.
 
 ## Setup Steps
 
@@ -13,7 +13,7 @@ Your contact form now uses EmailJS to send emails directly to `rajat17.maheshwar
 1. Go to [Email Services](https://dashboard.emailjs.com/admin/integration)
 2. Click "Add New Service"
 3. Choose **Gmail** (recommended)
-4. Click "Connect Account" and authorize your Gmail account (`rajat17.maheshwari@gmail.com`)
+4. Click "Connect Account" and authorize your Gmail account (`vaishnavi.jaligama@gmail.com`)
 5. Copy the **Service ID** (e.g., `service_xxxxxxx`)
 
 ### 3. Create an Email Template
@@ -47,52 +47,46 @@ This email was sent from your portfolio contact form.
 1. Go to [Account Settings](https://dashboard.emailjs.com/admin/account)
 2. Copy your **Public Key** (e.g., `xxxxxxxxxxxxxxx`)
 
-### 5. Update Your Code
+### 5. Create Environment Variables File
 
-Open `src/pages/Contact.tsx` and replace the placeholder values:
+The code is already configured to use environment variables. You just need to create a `.env` file with your credentials:
 
-**Line 56:** Replace `'YOUR_PUBLIC_KEY'` with your actual public key
+**Skip this step if you haven't completed steps 1-4 above!**
 
-**Lines 222-225:** Replace the values in the `emailjs.send()` function:
-```typescript
-await emailjs.send(
-  'service_xxxxxxx',    // Your Service ID
-  'template_xxxxxxx',   // Your Template ID
-  templateParams,
-  'xxxxxxxxxxxxxxx'     // Your Public Key
-);
-```
+Once you have your Service ID, Template ID, and Public Key, create a `.env` file in your project root.
 
-### 6. Test Your Form
+### 6. Restart Your Server and Test
+
+**Important:** After creating your `.env` file, restart your development server.
+
+Then test your form:
 1. Run your development server
 2. Fill out the contact form
 3. Submit it
-4. Check your email at `rajat17.maheshwari@gmail.com`
+4. Check your email at `vaishnavi.jaligama@gmail.com`
 
-## Environment Variables (Optional but Recommended)
+## Environment Variables Setup
 
-For better security, you can store these values in environment variables:
+The code has been updated to use environment variables for better security.
 
-1. Create a `.env` file in your project root:
+1. Create a `.env` file in your project root (same directory as package.json):
 ```env
 VITE_EMAILJS_SERVICE_ID=service_xxxxxxx
 VITE_EMAILJS_TEMPLATE_ID=template_xxxxxxx
 VITE_EMAILJS_PUBLIC_KEY=xxxxxxxxxxxxxxx
 ```
 
-2. Update `src/pages/Contact.tsx` to use environment variables:
-```typescript
-emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+2. Replace the placeholder values with your actual EmailJS credentials from steps above.
 
-await emailjs.send(
-  import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  templateParams,
-  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-);
+3. **Important:** Add `.env` to your `.gitignore` file to keep your credentials private:
+```
+# Environment variables
+.env
 ```
 
-3. Don't forget to add these environment variables to your hosting platform (Vercel, Netlify, etc.)
+4. After creating the `.env` file, restart your development server (`npm run dev`).
+
+5. **For Production:** Don't forget to add these environment variables to your hosting platform (GitHub Pages, Vercel, Netlify, etc.)
 
 ## Troubleshooting
 

@@ -104,31 +104,31 @@ const Index = () => {
                   "text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
                   isDarkMode ? 'text-gray-200' : 'text-gray-700'
                 )}>
-                  I'm a senior at the <strong>University of California, Santa Cruz</strong>, majoring in <strong>Computer Science</strong> with a strong passion for <strong>Artificial Intelligence</strong>, <strong>Large Language Models (LLMs)</strong>, and <strong>backend engineering</strong>. My work lies at the intersection of AI, reasoning, and scalable system design—driven by the goal of making intelligent systems more <strong>transparent, interpretable, and impactful</strong>.
+                  I'm a senior studying <strong>Computer Science</strong> at the <strong>University of California, Santa Cruz</strong>, with a strong focus on <strong>Artificial Intelligence</strong>, <strong>Large Language Models (LLMs)</strong>, and <strong>backend engineering</strong>. My interests lie at the intersection of AI, reasoning, and scalable systems—motivated by the goal of making intelligent systems more <strong>transparent, interpretable, and impactful</strong>.
                 </p>
                 <p className={cn(
                   "text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
                   isDarkMode ? 'text-gray-200' : 'text-gray-700'
                 )}>
-                  At the <strong>AIEA Lab</strong> under Professor Leilani Gilpin, I'm developing a <strong>chatbot fine-tuned on UCSC data</strong> to assist prospective students, current students, professors, and staff, streamlining campus information access through <strong>conversational AI</strong>. I'm also researching the applications of LLMs in law, focusing on building frameworks for <strong>logical reasoning, fairness, and explainability</strong> in legal decision-making.
+                  At the <strong>AIEA Lab</strong> under Professor Leilani Gilpin, I'm building a <strong>UCSC-focused chatbot</strong> to support prospective students, current students, faculty, and staff by simplifying campus information access through <strong>conversational AI</strong>. I'm also researching LLM applications in law, exploring frameworks that promote <strong>logical reasoning, fairness, and explainability</strong> in legal decision-making.
                 </p>
                 <p className={cn(
                   "text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
                   isDarkMode ? 'text-gray-200' : 'text-gray-700'
                 )}>
-                  Most recently, I worked as a <strong>Software Engineer Intern at AJA Consulting Services</strong>, where I built the company's official website from scratch using <strong>React, Next.js, and Tailwind CSS</strong>, increasing client engagement by <strong>70%</strong>. I also developed <strong>RBCal</strong>, a profitability analysis tool for an oil manufacturing client that automated rice bran purchase calculations and improved profit margins by <strong>18%</strong> through real-time data insights.
+                  Most recently, I served as a <strong>Software Engineer Intern at AJA Consulting Services</strong>, where I developed the <strong>Coding Tutor, compny's subsidary's website</strong> using <strong>React, Next.js, and Tailwind CSS</strong>, helping boost client engagement by <strong>70%</strong>. I also created <strong>RBCal</strong>, a profitability analysis tool that automated real-time rice bran purchasing decisions for an oil manufacturing client, increasing profit margins by <strong>18%</strong>.
                 </p>
                 <p className={cn(
                   "text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
                   isDarkMode ? 'text-gray-200' : 'text-gray-700'
                 )}>
-                  Previously, I interned at <strong>Nutanix</strong>, where I built an <strong>AI-powered log search chatbot</strong> that translated natural language queries into optimized <strong>OpenSearch DSL commands</strong>, enabling precise search across <strong>20TB+ of system logs</strong>. By fine-tuning lightweight LLMs like <strong>TinyLlama and Gemma 27B</strong> using <strong>LoRA and few-shot prompting</strong>, I improved semantic retrieval precision from <strong>72% to 93%</strong>, reducing issue-resolution time by <strong>65%</strong>.
+                  Previously, at <strong>Nutanix</strong>, I developed an <strong>AI-powered log search chatbot</strong> that translated natural language queries into optimized <strong>OpenSearch DSL commands</strong>, enabling precise search across <strong>20TB+ of system logs</strong>. By fine-tuning lightweight LLMs (<strong>TinyLlama, Gemma 27B</strong>) with <strong>LoRA and few-shot prompting</strong>, I improved semantic retrieval accuracy from <strong>72% to 93%</strong> and reduced troubleshooting time by <strong>65%</strong>.
                 </p>
                 <p className={cn(
                   "text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-5xl mx-auto",
                   isDarkMode ? 'text-gray-200' : 'text-gray-700'
                 )}>
-                  I'm deeply interested in advancing the fields of <strong>AI, LLMs, and backend systems</strong>, continuously exploring how <strong>logical reasoning and interpretability</strong> can make artificial intelligence more <strong>ethical, transparent, and useful to society</strong>.
+                  I'm passionate about advancing <strong>AI, LLMs, and backend systems</strong>, and am especially excited about how <strong>logical reasoning and interpretability</strong> can help AI become more <strong>ethical, transparent, and broadly useful</strong>.
                 </p>
               </div>
             </div>

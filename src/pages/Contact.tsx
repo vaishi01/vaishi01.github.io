@@ -53,7 +53,8 @@ const Contact = () => {
   useEffect(() => {
     // Initialize EmailJS with your public key
     // Get your public key from https://dashboard.emailjs.com/admin/account
-    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+    emailjs.init(publicKey);
   }, []);
 
   useEffect(() => {
@@ -219,10 +220,10 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        'YOUR_SERVICE_ID',    // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID',   // Replace with your EmailJS template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
         templateParams,
-        'YOUR_PUBLIC_KEY'     // Replace with your EmailJS public key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
       );
       
       console.log('Email sent successfully');

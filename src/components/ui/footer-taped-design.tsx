@@ -16,7 +16,7 @@ export const FooterTapedDesign = () => {
               Vaishnavi Jaligama
             </Link>
             <p className='text-gray-600 dark:text-gray-400 font-medium text-base w-full md:w-4/5'>
-              Computer Science student passionate about AI, LLMs, and backend engineering.
+              Computer Science senior at UC Santa Cruz passionate about AI, LLMs, and backend systems. Actively seeking full-time opportunities in software engineering and applied AI research to build scalable, intelligent solutions.
             </p>
           </div>
 
